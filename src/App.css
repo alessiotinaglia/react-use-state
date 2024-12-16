@@ -52,3 +52,12 @@ h1{
   padding: 20px;
 }
 
+.btn:focus {
+  background-color: rgb(224, 224, 45); 
+  border: 1px solid rgb(224, 224, 45);
+  color: black;
+}
+
+
+
+
