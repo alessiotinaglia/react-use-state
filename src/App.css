@@ -52,11 +52,23 @@ h1{
   padding: 20px;
 }
 
-.btn:focus {
-  background-color: rgb(224, 224, 45); 
-  border: 1px solid rgb(224, 224, 45);
-  color: black;
+.container-custom{
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
+.btn-container{
+  display: flex;              
+  justify-content: flex-start; 
+  gap: 10px;                  
+  flex-wrap: wrap;    
+  max-width: 1000px;     
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+
+
 
 
 

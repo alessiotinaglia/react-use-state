@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const MainComponent = ({ languages }) => {
-  const [linguaggioSelezionato, setLinguaggioSelezionato] = useState(languages[0]); 
+  const [linguaggioSelezionato, setLinguaggioSelezionato] = useState(languages[0]);
 
   // gestisce il click dei bottoni
   const gestisciClickBottone = (linguaggio) => {
@@ -11,19 +11,21 @@ const MainComponent = ({ languages }) => {
   return (
     <div>
       {/* fa vedere i bottoni con html /css ecc... */}
-      {languages.map((element) => (
-        <button 
-          key={element.id} 
-          className="btn btn-primary m-2"
-          onClick={() => gestisciClickBottone(element)}
-        >
-          {element.title}
-        </button>
-      ))}
+      <div className='btn-container'>
+        {languages.map((element) => (
+          <button
+            key={element.id}
+            className={`btn ${linguaggioSelezionato.id === element.id ? 'btn-warning' : 'btn-primary'}  m-2`}
+            onClick={() => gestisciClickBottone(element)}>
+            {element.title}
+          </button>
+        ))}
+      </div>
+
       {/* fa vedere la card */}
-      <div className="card mt-4">
+      <div className="card mt-4 container-custom">
         <div className="card-body">
-          <h5 className="card-title">{linguaggioSelezionato.title}</h5>
+          <h4 className="card-title">{linguaggioSelezionato.title}</h4>
           <p className="card-text">{linguaggioSelezionato.description}</p>
         </div>
       </div>
