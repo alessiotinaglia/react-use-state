@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import Main from './components/MainComponent';
+
+import './App.css';
+import Main from './components/Main'; 
+import Header from './components/HeaderComponent';
+import languages from './dati/languages'; 
 
 function App() {
   return (
     <>
-      <Main />
+      <Header />
+      <Main languages={languages} />
     </>
-  )
+  );
 }
 
 export default App;

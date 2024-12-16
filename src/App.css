@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 } */
+
+
+/* header */
+header{
+  height: 100px;
+  background-color: rgb(200, 200, 200);
+}
+
+h1{
+  padding: 20px;
+}
+
